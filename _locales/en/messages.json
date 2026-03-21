@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "[B.M] Bahamut Anime Crazy — 3× speed",
+    "description": "Extension name (English)"
+  },
+  "extDescription": {
+    "message": "Adds a 3× option to the playback speed menu on Bahamut Anime Crazy (ani.gamer.com.tw).",
+    "description": "Extension description (English)"
+  }
+}

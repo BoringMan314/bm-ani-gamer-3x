@@ -1,0 +1,7 @@
+# 本機／打包產物
+*.zip
+
+# 系統雜檔
+.DS_Store
+Thumbs.db
+desktop.ini

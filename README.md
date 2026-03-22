@@ -1,51 +1,101 @@
 # [B.M] 動畫瘋 3X 倍速
 
-在 [動畫瘋](https://ani.gamer.com.tw)（`ani.gamer.com.tw`）的 HTML5 播放器倍速選單中，新增 **3×** 選項，並將影片播放速率設為 3 倍。
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue)](https://developer.chrome.com/docs/extensions/mv3/)
+[![Site](https://img.shields.io/badge/site-ani.gamer.com.tw-5865F2)](https://ani.gamer.com.tw)
 
-- **Manifest V3**
-- **運作範圍**：僅 `https://ani.gamer.com.tw/*`
-- **隱私**：不蒐集、不上傳資料；說明見專案內 [`privacy-policy.html`](privacy-policy.html)（上架時請提供可公開存取的網址）
+適用於 [巴哈姆特動畫瘋](https://ani.gamer.com.tw)（`ani.gamer.com.tw`）的瀏覽器擴充功能：在 HTML5 播放器的**播放速度**選單中新增 **3×** 選項，並將影片 `playbackRate` 設為 3。
 
-## 功能說明
+> **聲明**：本專案為第三方輔助工具，與動畫瘋／巴哈姆特官方無關。使用請遵守該站服務條款與著作權規範。
 
-- 在 Video.js 播放器的「播放速度」選單最上方加入 **3x** 項目（與站方內建選項外觀一致）。
-- 點選後透過 HTML5 `<video>` 的 `playbackRate` 設為 3；若站方播放器改版，可能需要配合調整腳本。
+![擴充功能在播放器倍速選單中新增 3x 的示意](screenshot_1280x640.png)
+
+---
+
+## 目錄
+
+- [功能](#功能)
+- [安裝方式](#安裝方式)
+- [本機開發與測試](#本機開發與測試)
+- [專案結構](#專案結構)
+- [版本與多語系](#版本與多語系)
+- [隱私](#隱私)
+- [維護者：更新 GitHub 與 Chrome 線上應用程式商店](#維護者更新-github-與-chrome-線上應用程式商店)
+- [授權](#授權)
+
+## 功能
+
+- 在 Video.js 播放器的倍速選單**最上方**加入 **3x**（外觀與站方內建項目一致）。
+- 僅在 **`https://ani.gamer.com.tw/*`** 載入；不請求額外主機權限。
+- 若動畫瘋改版播放器 DOM，可能需調整 [`injected.js`](injected.js) 中的選取邏輯。
+
+## 安裝方式
+
+### 從 Chrome 線上應用程式商店（建議）
+
+若本擴充已上架，請在 [Chrome Web Store](https://chromewebstore.google.com/) 搜尋 **「[B.M] 動畫瘋 3X 倍速」** 或開發者提供的商店連結安裝。  
+（維護者可在本段自行補上固定商店 URL。）
+
+### 從原始碼載入（開發人員模式）
+
+1. 點選本頁綠色 **Code** → **Download ZIP** 解壓，或 `git clone` 本儲存庫。
+2. 開啟 Chrome 或 Edge，前往 `chrome://extensions`（Edge：`edge://extensions`）。
+3. 開啟「開發人員模式」→「載入未封裝項目」→ 選取含 [`manifest.json`](manifest.json) 的**專案根目錄**。
+4. 開啟動畫瘋任一有影片的頁面，重新整理後在倍速選單確認 **3x**。
 
 ## 本機開發與測試
 
-1. 複製或下載本儲存庫。
-2. 開啟 Chrome／Edge，前往 `chrome://extensions`（或 Edge 的擴充功能頁）。
-3. 開啟「開發人員模式」，點選「載入未封裝項目」，選取本專案資料夾（內含 `manifest.json` 的根目錄）。
-4. 在動畫瘋任一有影片的頁面重新整理，開啟倍速選單確認出現 **3x**。
+修改 `content.js`／`injected.js` 後，在 `chrome://extensions` 對本擴充按 **重新載入**，再重新整理動畫瘋分頁即可驗證。
+
+## 專案結構
+
+| 路徑 | 說明 |
+|------|------|
+| [`manifest.json`](manifest.json) | Manifest V3 設定、內容腳本比對網址 |
+| [`content.js`](content.js) | 注入頁面用的 `injected.js`（`web_accessible_resources`） |
+| [`injected.js`](injected.js) | 建立 3× 選單項目並設定 `<video>` 播放速率 |
+| [`_locales/`](_locales/) | 擴充名稱與說明（`zh_TW`、`zh_CN`、`en`、`ja`） |
+| [`privacy-policy.html`](privacy-policy.html) | 隱私權政策（上架時需提供可公開 HTTPS 網址） |
+| [`icons/`](icons/) | 16／48／128 px 圖示 |
 
 ## 版本與多語系
 
-- 版本號見 [`manifest.json`](manifest.json) 的 `version`。
-- 介面字串與商店說明來自 [`_locales/`](_locales/)（預設 `zh_TW`，並含 `en`、`ja`、`zh_CN`）。
+- 版本號：[`manifest.json`](manifest.json) 的 `version`。
+- 預設語系：`zh_TW`（`default_locale`）。
 
-## Chrome 線上應用程式商店 — 更新上架流程
+## 隱私
 
-以下須使用您的 [Chrome Web Store 開發人員帳號](https://chrome.google.com/webstore/devconsole) 操作，本儲存庫無法代為提交。
+本擴充**不蒐集、不上傳**個人資料；未使用分析或遠端程式碼。詳見 [`privacy-policy.html`](privacy-policy.html)。  
+**上架 Chrome Web Store 時**，後台須填寫隱私實踐，並提供該政策頁面的**公開 HTTPS URL**（可將 `privacy-policy.html` 託管於 GitHub Pages 等）。
 
-1. **遞增版本**：修改 `manifest.json` 的 `version`（例如 `0.1.0` → `0.1.1`）。
-2. **打包**：將要上傳的檔案打成 **ZIP**（根目錄須含 `manifest.json`）。建議排除：`.git`、未使用的 PSD、本機備份、未追蹤的個人檔案等。
-3. **上傳套件**：在開發人員資訊主頁選取既有項目 → 「套件」→ 上傳新 ZIP。
-4. **商店資產**（若文案或截圖有變）：更新說明、截圖；專案中已有 `screenshot_*.png` 可作為參考尺寸來源。
-5. **隱私權**：在商店後台填寫隱私權實踐，並提供託管於 HTTPS 的 [`privacy-policy.html`](privacy-policy.html) 對應公開 URL。
-6. **送審**：儲存並提交審核；審核通過後使用者端才會收到更新。
+## 維護者：更新 GitHub 與 Chrome 線上應用程式商店
 
-若為**首次上架**，除上述步驟外，還須完成一次性款項與開發人員帳戶設定（以 Google 當前政策為準）。
+### GitHub
 
-## 專案結構（摘要）
+於專案根目錄提交並推送即可，例如：
 
-| 檔案 | 用途 |
-|------|------|
-| `manifest.json` | 擴充功能設定與權限 |
-| `content.js` | 在符合的頁面注入 `injected.js` |
-| `injected.js` | 在頁面內新增 3× 選單並設定播放速率 |
-| `_locales/*/messages.json` | 名稱與描述字串 |
-| `privacy-policy.html` | 隱私權政策（可託管後提供 URL） |
+```bash
+git add README.md
+git commit -m "docs: 更新 README"
+git push origin main
+```
+
+### Chrome 線上應用程式商店
+
+須使用您的 [Chrome Web Store 開發人員控制台](https://chrome.google.com/webstore/devconsole) 操作，**本儲存庫無法代替您登入或送審**。
+
+1. **遞增版本**：每次上傳新套件須提高 `manifest.json` 的 `version`（例如 `0.1.0` → `0.1.1`）。
+2. **打包 ZIP**：根目錄須直接包含 `manifest.json`（勿多包一層資料夾）。建議只含：`manifest.json`、`content.js`、`injected.js`、`privacy-policy.html`、`icons/`、`_locales/`。排除：`.git`、`.gitignore`、截圖與說明用資產、個人檔案、`*.zip`。
+3. **上傳**：控制台選取項目 →「套件」→ 上傳新 ZIP。
+4. **商店資產**：若有文案或截圖變更，一併更新說明與螢幕截圖（可參考專案內 `screenshot_1280x640.png` 構圖）。
+5. **隱私權**：提供 `privacy-policy.html` 對應之公開 URL。
+6. **提交審核**：審核通過後使用者才會收到更新。
+
+首次上架另須完成 Google 開發人員註冊與一次性費用等（以 [官方說明](https://developer.chrome.com/docs/webstore/register) 為準）。
 
 ## 授權
 
-未附獨立授權檔案時，預設為版權所有；若您要開放他人使用或修改，可自行新增 `LICENSE` 並於此段更新說明。
+目前儲存庫未附獨立 `LICENSE` 檔時，預設為版權所有；若希望開放使用或修改，請自行新增授權檔並更新本段說明。
+
+## 問題與建議
+
+歡迎使用 [GitHub Issues](https://github.com/BoringMan314/bm.ani.gamer.3x/issues) 回報錯誤或提出改善建議（請盡量附上瀏覽器版本與重現步驟）。

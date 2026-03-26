@@ -27,15 +27,21 @@
 - [授權](#授權)
 - [問題與建議](#問題與建議)
 
+---
+
 ## 功能
 
 - 在 Video.js 播放器的倍速選單**最上方**加入 **3x**（外觀與站方內建項目一致）。
 - 僅在 **`https://ani.gamer.com.tw/*`** 載入；`manifest` 未宣告 `host_permissions`，不額外請求其他網域。
 - 若動畫瘋改版播放器 DOM，可能需調整 [`injected.js`](injected.js) 中的選取邏輯。
 
+---
+
 ## 系統需求
 
 - **Chrome** 或 **Microsoft Edge**（Chromium）等支援 **Manifest V3** 的瀏覽器。
+
+---
 
 ## 安裝方式
 
@@ -50,14 +56,20 @@
 3. 開啟「開發人員模式」→「載入未封裝項目」→ 選取含 [`manifest.json`](manifest.json) 的**專案根目錄**。
 4. 開啟動畫瘋任一有影片的頁面，重新整理後在倍速選單確認 **3x**。
 
+---
+
 ## 本機開發與測試
 
 修改 `content.js`／`injected.js` 後，在 `chrome://extensions` 對本擴充按 **重新載入**，再重新整理動畫瘋分頁即可驗證。
+
+---
 
 ## 技術概要
 
 - **內容腳本** [`content.js`](content.js) 僅負責在符合網址的頁面插入 `<script src="…/injected.js">`，載入後即移除該標籤。
 - **頁面脈絡** [`injected.js`](injected.js) 在網頁的 JS 環境中執行，以便操作 Video.js 產生的選單 DOM，並對實際的 `<video>` 設定 `playbackRate`。
+
+---
 
 ## 專案結構
 
@@ -80,16 +92,22 @@
 | `screenshot_1280x640.png` | README／說明用 |
 | `screenshot_1400x560.png` | 大型宣傳圖 |
 
+---
+
 ## 版本與多語系
 
 - 版本號：[`manifest.json`](manifest.json) 的 `version`。
 - 預設語系：`zh_TW`（`default_locale`）。
+
+---
 
 ## 隱私
 
 本擴充**不蒐集、不上傳**個人資料；未使用分析或遠端程式碼。詳見 [`privacy-policy.html`](privacy-policy.html)。
 
 **上架 Chrome Web Store 時**，後台須填寫隱私實踐，並提供該政策頁面的**公開 HTTPS URL**（可將 `privacy-policy.html` 託管於 [GitHub Pages](https://pages.github.com/) 等）。
+
+---
 
 ## 維護者：更新 GitHub 與 Chrome 線上應用程式商店
 
@@ -116,9 +134,13 @@ git push origin main
 
 首次上架另須完成 Google 開發人員註冊與一次性費用等（以 [官方說明](https://developer.chrome.com/docs/webstore/register) 為準）。
 
+---
+
 ## 授權
 
 目前儲存庫未附獨立 `LICENSE` 檔時，預設為版權所有；若希望開放使用或修改，請自行新增授權檔並更新本段說明。
+
+---
 
 ## 問題與建議
 

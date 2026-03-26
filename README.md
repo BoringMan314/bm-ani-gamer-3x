@@ -52,7 +52,7 @@
 
 ### 從原始碼載入（開發人員模式）
 
-1. 點選本頁綠色 **Code** → **Download ZIP** 解壓，或在本機執行 `git clone https://github.com/BoringMan314/bm-ani-gamer-3x.git` 後進入該目錄。
+1. 點選本頁綠色 **Code** → **Download ZIP** 解壓，或 `git clone https://github.com/BoringMan314/bm-ani-gamer-3x.git`。
 2. 開啟 Chrome 或 Edge，前往 `chrome://extensions`（Edge：`edge://extensions`）。
 3. 開啟「開發人員模式」→「載入未封裝項目」→ 選取含 [`manifest.json`](manifest.json) 的**專案根目錄**。
 4. 開啟動畫瘋任一有影片的頁面，重新整理後在倍速選單確認 **3x**。
@@ -114,18 +114,10 @@
 
 ### GitHub
 
-本儲存庫正式網址為 **[BoringMan314/bm-ani-gamer-3x](https://github.com/BoringMan314/bm-ani-gamer-3x)**。於專案根目錄提交並推送即可，例如：
-
 ```bash
 git add README.md
 git commit -m "docs: 更新 README"
 git push origin main
-```
-
-若您先前是從舊名稱 `bm.ani.gamer.3x` clone，且 `git remote -v` 仍指向舊網址，請改為：
-
-```bash
-git remote set-url origin https://github.com/BoringMan314/bm-ani-gamer-3x.git
 ```
 
 ### Chrome 線上應用程式商店
@@ -151,4 +143,4 @@ git remote set-url origin https://github.com/BoringMan314/bm-ani-gamer-3x.git
 
 ## 問題與建議
 
-歡迎使用 [GitHub Issues](https://github.com/BoringMan314/bm-ani-gamer-3x/issues) 回報錯誤或提出改善建議（請盡量附上瀏覽器版本與重現步驟）。
+[GitHub Issues](https://github.com/BoringMan314/bm-ani-gamer-3x/issues)

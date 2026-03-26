@@ -121,6 +121,12 @@ git commit -m "docs: 更新 README"
 git push origin main
 ```
 
+若您已在 GitHub 將儲存庫更名為 `bm-ani-gamer-3x`，請在本機同步遠端網址（否則 `git push` 仍會指向舊名稱）：
+
+```bash
+git remote set-url origin https://github.com/BoringMan314/bm-ani-gamer-3x.git
+```
+
 ### Chrome 線上應用程式商店
 
 須使用您的 [Chrome Web Store 開發人員控制台](https://chrome.google.com/webstore/devconsole) 操作，**本儲存庫無法代替您登入或送審**。

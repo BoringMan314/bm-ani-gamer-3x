@@ -144,4 +144,4 @@ git push origin main
 
 ## 問題與建議
 
-歡迎使用 [GitHub Issues](https://github.com/BoringMan314/bm.ani.gamer.3x/issues) 回報錯誤或提出改善建議（請盡量附上瀏覽器版本與重現步驟）。
+歡迎使用 [GitHub Issues](https://github.com/BoringMan314/bm-ani-gamer-3x/issues) 回報錯誤或提出改善建議（請盡量附上瀏覽器版本與重現步驟）。

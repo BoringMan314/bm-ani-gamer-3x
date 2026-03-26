@@ -2,6 +2,7 @@
 
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue)](https://developer.chrome.com/docs/extensions/mv3/)
 [![Site](https://img.shields.io/badge/site-ani.gamer.com.tw-5865F2)](https://ani.gamer.com.tw)
+[![GitHub](https://img.shields.io/badge/GitHub-bm--ani--gamer--3x-181717?logo=github)](https://github.com/BoringMan314/bm-ani-gamer-3x)
 
 適用於 [巴哈姆特動畫瘋](https://ani.gamer.com.tw)（`ani.gamer.com.tw`）的瀏覽器擴充功能：在 HTML5 播放器的**播放速度**選單中新增 **3×** 選項，並將影片 `playbackRate` 設為 3。
 
@@ -51,7 +52,7 @@
 
 ### 從原始碼載入（開發人員模式）
 
-1. 點選本頁綠色 **Code** → **Download ZIP** 解壓，或 `git clone` 本儲存庫。
+1. 點選本頁綠色 **Code** → **Download ZIP** 解壓，或在本機執行 `git clone https://github.com/BoringMan314/bm-ani-gamer-3x.git` 後進入該目錄。
 2. 開啟 Chrome 或 Edge，前往 `chrome://extensions`（Edge：`edge://extensions`）。
 3. 開啟「開發人員模式」→「載入未封裝項目」→ 選取含 [`manifest.json`](manifest.json) 的**專案根目錄**。
 4. 開啟動畫瘋任一有影片的頁面，重新整理後在倍速選單確認 **3x**。
@@ -113,7 +114,7 @@
 
 ### GitHub
 
-於專案根目錄提交並推送即可，例如：
+本儲存庫正式網址為 **[BoringMan314/bm-ani-gamer-3x](https://github.com/BoringMan314/bm-ani-gamer-3x)**。於專案根目錄提交並推送即可，例如：
 
 ```bash
 git add README.md
@@ -121,7 +122,7 @@ git commit -m "docs: 更新 README"
 git push origin main
 ```
 
-若您已在 GitHub 將儲存庫更名為 `bm-ani-gamer-3x`，請在本機同步遠端網址（否則 `git push` 仍會指向舊名稱）：
+若您先前是從舊名稱 `bm.ani.gamer.3x` clone，且 `git remote -v` 仍指向舊網址，請改為：
 
 ```bash
 git remote set-url origin https://github.com/BoringMan314/bm-ani-gamer-3x.git

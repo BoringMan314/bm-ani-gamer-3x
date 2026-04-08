@@ -6,8 +6,8 @@
 
 適用於 [巴哈姆特動畫瘋](https://ani.gamer.com.tw)（`ani.gamer.com.tw`）的瀏覽器擴充功能：在 HTML5 播放器的**播放速度**選單中新增 **3×** 選項，並將影片 `playbackRate` 設為 3。
 
-*在巴哈姆特动画疯（`ani.gamer.com.tw`）的播放速度菜单中新增 **3×** 选项。*
-*Bahamut Anime Crazy（`ani.gamer.com.tw`）の再生速度メニューに **3×** オプションを追加します。*
+*在巴哈姆特动画疯（`ani.gamer.com.tw`）的播放速度菜单中新增 **3×** 选项。  *
+*Bahamut Anime Crazy（`ani.gamer.com.tw`）の再生速度メニューに **3×** オプションを追加します。  *
 *Adds a **3×** option to the playback speed menu on Bahamut Anime Crazy (`ani.gamer.com.tw`).*
 
 > **聲明**：本專案為第三方輔助工具，與動畫瘋／巴哈姆特官方無關。使用請遵守該站服務條款與著作權規範。

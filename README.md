@@ -119,15 +119,7 @@
 
 ### 更新至 GitHub
 
-**Bash / Git Bash：**
-
-```bash
-git add .
-git commit -m "docs: 更新內容說明與商店連結"
-git push origin main
-```
-
-**PowerShell：**
+**Bash / Git Bash / PowerShell：**
 
 ```powershell
 git add .

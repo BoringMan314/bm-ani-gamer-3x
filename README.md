@@ -3,6 +3,7 @@
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue)](https://developer.chrome.com/docs/extensions/mv3/)
 [![Site](https://img.shields.io/badge/site-ani.gamer.com.tw-5865F2)](https://ani.gamer.com.tw)
 [![GitHub](https://img.shields.io/badge/GitHub-bm--ani--gamer--3x-181717?logo=github)](https://github.com/BoringMan314/bm-ani-gamer-3x)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 適用於 [巴哈姆特動畫瘋](https://ani.gamer.com.tw)（`ani.gamer.com.tw`）的瀏覽器擴充功能：在 HTML5 播放器的**播放速度**選單中新增 **3×** 選項，並將影片 `playbackRate` 設為 3。
 
@@ -118,7 +119,17 @@
 
 ### 更新至 GitHub
 
+**Bash / Git Bash：**
+
 ```bash
+git add .
+git commit -m "docs: 更新內容說明與商店連結"
+git push origin main
+```
+
+**PowerShell：**
+
+```powershell
 git add .
 git commit -m "docs: 更新內容說明與商店連結"
 git push origin main
@@ -139,7 +150,7 @@ git push origin main
 
 ## 授權
 
-本專案目前未附帶獨立 `LICENSE` 檔案，預設保留所有權利。若欲開放原始碼授權，請自行新增 `LICENSE` 檔案。
+本專案以 [MIT License](LICENSE) 授權。
 
 ---
 

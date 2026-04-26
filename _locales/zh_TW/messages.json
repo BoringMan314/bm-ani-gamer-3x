@@ -1,10 +1,10 @@
 {
-  "extName": {
-    "message": "[B.M] 動畫瘋 3X 倍速",
-    "description": "擴充功能名稱（繁體中文）"
-  },
   "extDescription": {
     "message": "在動畫瘋（ani.gamer.com.tw）播放器的倍速選單中新增「3x」。",
     "description": "擴充功能簡介（繁體中文）"
+  },
+  "extName": {
+    "message": "[B.M] 動畫瘋 3X 倍速",
+    "description": "擴充功能名稱（繁體中文）"
   }
 }

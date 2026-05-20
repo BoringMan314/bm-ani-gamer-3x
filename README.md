@@ -3,6 +3,7 @@
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue)](https://developer.chrome.com/docs/extensions/mv3/)
 [![Site](https://img.shields.io/badge/site-ani.gamer.com.tw-5865F2)](https://ani.gamer.com.tw)
 [![GitHub](https://img.shields.io/badge/GitHub-bm--ani--gamer--3x-181717?logo=github)](https://github.com/BoringMan314/bm-ani-gamer-3x)
+[![GitHub all releases](https://img.shields.io/github/downloads/BoringMan314/bm-ani-gamer-3x/total)](https://github.com/BoringMan314/bm-ani-gamer-3x/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 適用於 [巴哈姆特動畫瘋](https://ani.gamer.com.tw)（`ani.gamer.com.tw`）的瀏覽器擴充功能：在 HTML5 播放器的**播放速度**選單中新增 **3×** 選項，並將影片 `playbackRate` 設為 3。
